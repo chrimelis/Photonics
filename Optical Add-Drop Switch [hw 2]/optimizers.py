@@ -62,10 +62,10 @@ def cost_function(ER_through,ER_drop,IL_through,IL_drop):
         that does not satisfy the imposed requirements.
         Finally the indices which minimize the cost function are returned
     '''
-    penalty1 = np.maximum(((ER_through+15)/np.max(np.abs(ER_through)))**2, 0);  w1 = 50
-    penalty2 = np.maximum(((ER_drop+14)/np.max(np.abs(ER_drop)))**2, 0);        w2 = 50
-    penalty3 = np.maximum(((IL_through-3)/np.max(np.abs(IL_through)))**2, 0);   w3 = 1
-    penalty4 = np.maximum(((IL_drop-5)/np.max(np.abs(IL_drop)))**2, 0);         w4 = 1
+    penalty1 = np.maximum((ER_through+15)/np.max(np.abs(ER_through)), 0);  w1 = 10
+    penalty2 = np.maximum((ER_drop+14)/np.max(np.abs(ER_drop)), 0);        w2 = 10
+    penalty3 = np.maximum((IL_through-3)/np.max(np.abs(IL_through)), 0);   w3 = 1
+    penalty4 = np.maximum((IL_drop-5)/np.max(np.abs(IL_drop)), 0);         w4 = 1
 
     cost = w1*penalty1 + w2*penalty2 + w3*penalty3 + w4*penalty4
     # Find the indices with the minimum cost

@@ -208,7 +208,7 @@ print('---------------')
 # space (t1,t2) with 0<t1<1 and 0<t2<1
  
 print('---------------')
-opt.critical_strip_search(a,phi) #=> prints ours design parameters and figures of merit achieved
+opt.critical_strip_search(a,phi) #=> prints our design parameters and figures of merit achieved
 print('---------------')
 
 plt.show()
